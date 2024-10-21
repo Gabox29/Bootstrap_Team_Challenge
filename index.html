@@ -7,12 +7,50 @@
   <title>Form</title>
 </head>
 <body>
-  <h1>Hello, Bootstrap!</h1>
-  <button id="myButton" class="btn btn-primary">Click Me!</button>
+  <nav class="navbar bg-primary mb-3">
+    <div class="container-fluid justify-content-evenly">
+      <a href="#" class="navbar-brand fw-bold">Form</a>
+      <a href="./pages/users.html" class="navbar-brand fw-bold">Users</a>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <form>
+      <div class="mb-3">
+        <label for="user" class="form-label">User</label>
+        <input type="text" class="form-control" id="user">
+        <div id="alertUserPlaceholder"></div>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="preciosa@españita.com">
+        <div id="alertEmailPlaceholder"></div>
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" aria-describedby="passwordHelp">
+        <div id="passwordHelp" class="form-text">At least 12 characters long, uppercase and lowercase letters, numbers, and special characters (e.g., @, #, $, %, &, *, !)</div>
+        <div id="alertPasswordPlaceholder"></div>
+      </div>
+
+      <div class="mb-3">
+        <label for="repeatPassword" class="form-label">Repeat Password</label>
+        <input type="password" class="form-control" id="repeatPassword">
+        <div id="alertRepeatPasswordPlaceholder"></div>
+      </div>
+
+      <div id="alertBtnPlaceholder"></div>
+      <button type="submit" class="btn btn-primary" id="btnSubtmit">Submit</button>
+      <button class="btn btn-secondary" id="clearLocalStorage">Limpiame el storage boludito</button>
+
+    </form>
+  </div>
 
 
-  <button type="button" class="btn btn-danger">Danger</button>
-  <script type="module" src="./src/main.js"></script>
+  <!-- <button type="button" class="btn btn-danger">Danger</button> -->
+  <script src="./src/main.js"></script>
   <script src="./assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
